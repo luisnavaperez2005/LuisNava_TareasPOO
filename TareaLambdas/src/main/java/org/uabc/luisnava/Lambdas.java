@@ -8,4 +8,8 @@ public class Lambdas {
         numeros.replaceAll(n -> n * valorAMultiplicar);
     }
 
+    public static void filtroSelectivo(ArrayList<String> palabras, char letra, int longitudMenor){
+
+    }
+
 }
