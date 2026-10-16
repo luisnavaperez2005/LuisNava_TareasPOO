@@ -9,7 +9,10 @@ public class Lambdas {
     }
 
     public static void filtroSelectivo(ArrayList<String> palabras, char letra, int longitudMenor) {
-        palabras.removeIf(n -> n.length() < longitudMenor);
+        palabras.removeIf(n -> (n.charAt(0) == letra) || (n.length() < longitudMenor));
     }
+
+
+
 
 }
