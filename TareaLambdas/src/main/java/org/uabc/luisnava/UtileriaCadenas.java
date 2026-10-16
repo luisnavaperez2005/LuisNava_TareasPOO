@@ -36,5 +36,11 @@ public class UtileriaCadenas {
         return frecuencias;
     }
 
+    public static ArrayList<String> clasificadorDePalabras(HashMap<String, Integer> frecuencias, int valorDeLimite){
+        ArrayList<String> resultado;
+        resultado = frecuencias.entrySet().stream().filter(n -> n.getValue() < valorDeLimite).map(n -> n.getKey()).collect(Collectors.toCollection(ArrayList::new));
+        return resultado;
+    }
+
 
 }
