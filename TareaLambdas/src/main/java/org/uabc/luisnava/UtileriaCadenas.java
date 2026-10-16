@@ -50,5 +50,9 @@ public class UtileriaCadenas {
         return resultado;
     }
 
+    public static void elTopeDeFrecuencias(HashMap<String, Integer> frecuencia, int valorDeLimite){
+        frecuencia.replaceAll((palabra, cantidad) -> cantidad > valorDeLimite ? valorDeLimite : cantidad);
+    }
+
 
 }
