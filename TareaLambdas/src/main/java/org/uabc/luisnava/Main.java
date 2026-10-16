@@ -10,11 +10,16 @@ public class Main {
         UtileriaCadenas utileriaCadenas = new UtileriaCadenas();
 
         ArrayList<Integer> numeros = new ArrayList<>();
+        ArrayList<Integer> resultadoMultiplicacion = new ArrayList<>();
+
         for (int i = 0; i < 10; i++){
             numeros.add(i, i);
         }
 
-        utileriaNumeros.multiplicar(numeros, 3);
+        resultadoMultiplicacion = utileriaNumeros.multiplicar(numeros, 3);
+        System.out.println("Numeros al Cuadrado "+ resultadoMultiplicacion);
+
+
 
     }
 }
