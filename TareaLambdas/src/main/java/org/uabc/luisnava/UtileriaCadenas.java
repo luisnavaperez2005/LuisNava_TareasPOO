@@ -30,4 +30,11 @@ public class UtileriaCadenas {
         productos.forEach((nombre, precio) -> { System.out.println(nombre + ":" + (precio * 0.90));});
     }
 
+    public static HashMap<String, Integer> contadorDeFrecuencias(ArrayList<String> palabras){
+        HashMap<String, Integer> frecuencias = new HashMap<>();
+        palabras.forEach(palabra -> frecuencias.merge(palabra, 1,(anterior, nuevo) -> anterior + nuevo));
+        return frecuencias;
+    }
+
+
 }
