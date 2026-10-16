@@ -1,6 +1,7 @@
 package org.uabc.luisnava;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.stream.Collectors;
@@ -39,6 +40,13 @@ public class UtileriaCadenas {
     public static ArrayList<String> clasificadorDePalabras(HashMap<String, Integer> frecuencias, int valorDeLimite){
         ArrayList<String> resultado;
         resultado = frecuencias.entrySet().stream().filter(n -> n.getValue() < valorDeLimite).map(n -> n.getKey()).collect(Collectors.toCollection(ArrayList::new));
+        return resultado;
+    }
+
+    public static HashSet<String> deduplicacionDePalabaras(String frase, int valorDeLimite){
+        String[] palabras = frase.split("\\s+");
+        HashSet<String> resultado;
+        resultado = Arrays.stream(palabras).filter(n -> n.length() >= valorDeLimite).map(String::toLowerCase).collect(Collectors.toCollection(HashSet::new));
         return resultado;
     }
 
