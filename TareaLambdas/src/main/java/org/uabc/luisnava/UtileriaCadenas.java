@@ -26,6 +26,10 @@ public class UtileriaCadenas {
         return resultado;
     }
 
+    public static void modificadorDeInventario(HashMap<String, Double> productos){
+        productos.forEach((nombre, precio) -> { System.out.println(nombre + ":" + precio);});
+    }
+
 
 
 }
