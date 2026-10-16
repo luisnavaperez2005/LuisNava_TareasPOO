@@ -25,4 +25,7 @@ public class UtileriaCadenas {
         resultado = palabras.stream().collect(Collectors.toMap(palabra -> palabra, palabra -> palabra.length(), (anterior, nuevo) -> anterior, HashMap::new));
         return resultado;
     }
+
+
+
 }
