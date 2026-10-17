@@ -7,19 +7,15 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 
 public class UtileriaCadenas {
-    public static void filtroSelectivo(ArrayList<String> palabras, char letra, int longitudMenor) {
+    public static ArrayList<String> filtroSelectivo(ArrayList<String> palabras, char letra, int longitudMenor) {
         palabras.removeIf(n -> (n.charAt(0) == letra) || (n.length() < longitudMenor));
-    }
-
-    public static ArrayList<String> conversorAMayusculas(ArrayList<String> palabras){
-        palabras.stream().map(String::toUpperCase).distinct().collect(Collectors.toList());
         return palabras;
     }
 
-    public static HashSet<Integer> cuadradosUnicos(ArrayList<Integer> numeros){
-        HashSet<Integer> resultado = numeros.stream().filter(n -> n % 2 == 0).map(n -> n * n).collect(Collectors.toCollection(HashSet::new));
-        return resultado;
+    public static ArrayList<String> conversorAMayusculas(ArrayList<String> palabras){
+        return palabras.stream().map(String::toUpperCase).distinct().collect(Collectors.toCollection(ArrayList::new));
     }
+
 
     public static HashMap<String, Integer> longitudes(ArrayList<String> palabras){
         HashMap<String, Integer> resultado;
