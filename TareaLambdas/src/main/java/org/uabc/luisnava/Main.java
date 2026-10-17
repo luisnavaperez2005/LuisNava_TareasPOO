@@ -15,6 +15,7 @@ public class Main {
         ArrayList<Integer> numeros = new ArrayList<>();
         ArrayList<Integer> resultadoMultiplicacion;
         ArrayList<String> palabras = new ArrayList<>();
+        HashMap<String, Double> productos = new HashMap<>();
 
 
         for (int i = 0; i < 10; i++){
@@ -29,6 +30,10 @@ public class Main {
         palabras.add(5,"Internet");
         palabras.add(6, "Pantalla");
         palabras.add(7, "Hola");
+
+        productos.put("Computadora", 14000.0);
+        productos.put("Teclado", 2500.0);
+        productos.put("Mouse", 500.0);
 
 
         ArrayList<String> palabrasFiltradas = new ArrayList<>(palabras);
@@ -50,6 +55,8 @@ public class Main {
 
         longitudPalabras = utileriaCadenas.longitudes(palabras);
         System.out.println("Longitudes de las palabras: "+longitudPalabras);
+
+        utileriaCadenas.modificadorDeInventario(productos);
 
     }
 }
