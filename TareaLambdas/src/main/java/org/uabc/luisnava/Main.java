@@ -42,6 +42,7 @@ public class Main {
         HashMap<String, Integer> longitudPalabras = new HashMap<>();
         HashMap<String, Integer> frecuencias = new HashMap<>();
         ArrayList<String> clasificaciones = new ArrayList<>();
+        HashSet<String> noSeRepite = new HashSet<>();
 
 
         resultadoMultiplicacion = utileriaNumeros.multiplicar(numeros, 3);
@@ -66,6 +67,11 @@ public class Main {
 
         clasificaciones = utileriaCadenas.clasificadorDePalabras(frecuencias, 2);
         System.out.println("Palabras que se repiten menos de 2 veces: "+clasificaciones);
+
+        String frase = "Hola mundo este es una frase normal hola mundo frase";
+        noSeRepite = utileriaCadenas.deduplicacionDePalabaras(frase, 5);
+        System.out.println("Palabras que no se repiten y son mayores al limite de 5: "+noSeRepite);
+
 
 
     }
