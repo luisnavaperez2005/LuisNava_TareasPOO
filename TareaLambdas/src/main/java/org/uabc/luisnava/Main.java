@@ -34,6 +34,7 @@ public class Main {
         ArrayList<String> palabrasFiltradas = new ArrayList<>(palabras);
         ArrayList<String> palabrasAMayusculas = new ArrayList<>(palabras);
         HashSet<Integer> numerosCuadradosUnicos = new HashSet<>(numeros);
+        HashMap<String, Integer> longitudPalabras = new HashMap<>();
 
         resultadoMultiplicacion = utileriaNumeros.multiplicar(numeros, 3);
         System.out.println("Numeros multiplicados por 3 "+ resultadoMultiplicacion);
@@ -46,6 +47,9 @@ public class Main {
 
         numerosCuadradosUnicos = utileriaNumeros.cuadradosUnicos(numeros);
         System.out.println("Cuadrados de los numeros que son pares y unicos: "+numerosCuadradosUnicos);
+
+        longitudPalabras = utileriaCadenas.longitudes(palabras);
+        System.out.println("Longitudes de las palabras: "+longitudPalabras);
 
     }
 }
