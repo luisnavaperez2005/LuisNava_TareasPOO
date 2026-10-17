@@ -73,6 +73,8 @@ public class Main {
         System.out.println("Palabras que no se repiten y son mayores al limite de 5: "+noSeRepite);
 
 
+        utileriaCadenas.elTopeDeFrecuencias(frecuencias, 1);
+        System.out.println("Frecuencia de palabras limitada a 1: " + frecuencias);
 
     }
 }
