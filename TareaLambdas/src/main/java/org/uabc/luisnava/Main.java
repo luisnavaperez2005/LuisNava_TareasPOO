@@ -2,6 +2,8 @@ package org.uabc.luisnava;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -31,6 +33,7 @@ public class Main {
 
         ArrayList<String> palabrasFiltradas = new ArrayList<>(palabras);
         ArrayList<String> palabrasAMayusculas = new ArrayList<>(palabras);
+        HashSet<Integer> numerosCuadradosUnicos = new HashSet<>(numeros);
 
         resultadoMultiplicacion = utileriaNumeros.multiplicar(numeros, 3);
         System.out.println("Numeros multiplicados por 3 "+ resultadoMultiplicacion);
@@ -41,6 +44,8 @@ public class Main {
         palabrasAMayusculas = utileriaCadenas.conversorAMayusculas(palabrasAMayusculas);
         System.out.println("Palabras en MAYUSCULA: "+palabrasAMayusculas);
 
+        numerosCuadradosUnicos = utileriaNumeros.cuadradosUnicos(numeros);
+        System.out.println("Cuadrados de los numeros que son pares y unicos: "+numerosCuadradosUnicos);
 
     }
 }
