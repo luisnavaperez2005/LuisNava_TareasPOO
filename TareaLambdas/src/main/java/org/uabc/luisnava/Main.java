@@ -40,6 +40,9 @@ public class Main {
         ArrayList<String> palabrasAMayusculas = new ArrayList<>(palabras);
         HashSet<Integer> numerosCuadradosUnicos = new HashSet<>(numeros);
         HashMap<String, Integer> longitudPalabras = new HashMap<>();
+        HashMap<String, Integer> frecuencias = new HashMap<>();
+        ArrayList<String> clasificaciones = new ArrayList<>();
+
 
         resultadoMultiplicacion = utileriaNumeros.multiplicar(numeros, 3);
         System.out.println("Numeros multiplicados por 3 "+ resultadoMultiplicacion);
@@ -57,6 +60,13 @@ public class Main {
         System.out.println("Longitudes de las palabras: "+longitudPalabras);
 
         utileriaCadenas.modificadorDeInventario(productos);
+
+        frecuencias = utileriaCadenas.contadorDeFrecuencias(palabras);
+        System.out.println("Numero de veces que se repiten las palabras: "+frecuencias);
+
+        clasificaciones = utileriaCadenas.clasificadorDePalabras(frecuencias, 2);
+        System.out.println("Palabras que se repiten menos de 2 veces: "+clasificaciones);
+
 
     }
 }
